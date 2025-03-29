@@ -12,4 +12,4 @@ Un repositorio de practicas de distintos lenguajes de programación siguiendo un
     8) Bibliotecas y otros aspectos especificos del lenguaje
 ```
 ### Lenguajes en su respectiva branch
-* Go
+* [Go](https://github.com/martina-pauer/programming-roadmap/tree/Go "Practica con go muy provechoso lenguaje")
