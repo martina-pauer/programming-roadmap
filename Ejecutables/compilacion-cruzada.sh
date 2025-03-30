@@ -1,10 +1,11 @@
 #!/usr/bin/bash
 # Variables sys y arch para compilar a varios sistemas y arquitecturas multiples archivos en go
-sys="aix"
-arch="ppc64"
+sys="windows"
+arch="386"
 prefix=".."
-compilados="fibonacci ciclos leer escribir logica saludo"
-ejecutables="IBM_AIX/ppc64"
+extension=".exe"
+compilados="fibonacci$extension ciclos$extension leer$extension escribir$extension logica$extension saludo$extension"
+ejecutables="Windows/32-bits"
 # Compilo cada uno de los archivos
 GOOS=$sys GOARCH=$arch go build $prefix/fibonacci.go
 GOOS=$sys GOARCH=$arch go build $prefix/ciclos.go
