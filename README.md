@@ -1,3 +1,7 @@
+<# Practicas con Go
+paracticando con este eficiente lenguaje con sintaxis sencilla creado en [Google](https://go.dev "guia de Go") y
+usado en optimizacion de servidores, concurrencia, microserviciosy modelos de datos.
+=======
 # programming-roadmap (Para salir de solo programar en Python)
 Un repositorio de practicas de distintos lenguajes de programación siguiendo una hoja de ruta con los mismos temas mas importantes.
 ## Temas
