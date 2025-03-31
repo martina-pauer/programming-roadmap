@@ -3,14 +3,16 @@
 sys="aix"
 arch="ppc64"
 prefix=".."
-compilados="fibonacci ciclos leer escribir logica saludo"
+extension=""
+compilados="$prefix/fibonacci$extension $prefix/ciclos$extension $prefix/leer$extension $prefix/escribir$extension $prefix/logica$extension $prefix/saludo$extension"
 ejecutables="IBM_AIX/ppc64"
+compilar="GOOS=$sys GOARCH=$arch go build $prefix"
 # Compilo cada uno de los archivos
-GOOS=$sys GOARCH=$arch go build $prefix/fibonacci.go
-GOOS=$sys GOARCH=$arch go build $prefix/ciclos.go
-GOOS=$sys GOARCH=$arch go build $prefix/leer.go
-GOOS=$sys GOARCH=$arch go build $prefix/escribir.go
-GOOS=$sys GOARCH=$arch go build $prefix/logica.go
-GOOS=$sys GOARCH=$arch go build $prefix/saludo.go
+$compilar/fibonacci.go
+$compilar/ciclos.go
+$compilar/leer.go
+$compilar/escribir.go
+$compilar/logica.go
+$compilar/saludo.go
 # Muevo archivos ejecutables a la carpeta de ejecutables correspondiente
 mv $compilados -t $ejecutables
