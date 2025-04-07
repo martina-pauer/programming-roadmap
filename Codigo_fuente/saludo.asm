@@ -10,22 +10,22 @@
 _start:
     /* 
         Instruccion para copiar llamada al sistema
-        de escritura en registro EAX
+        de escritura en registro acumalador
     */
-    movl $4, %eax
+    mov $4, %rax
     /* 
         Argumento con descriptor de archivo para salida
-        estandar, registro EBX
+        estandar, registro de base
     */
-    movl $1, %ebx
+    mov $1, %rbx
     /* 
-        Mensaje a escribir en registro ECX
+        Mensaje a escribir en registro contador
     */
-    movl $msg, %ecx
+    mov $msg, %rcx
     /* 
-        Longitud del mensaje a escribir en registro EDX
+        Longitud del mensaje a escribir en registro de dato
     */
-    movl $len, %edx
+    mov $len, %rdx
     /*
         Interrupcion con locacion 0x80(128) que invoca
         procedimiento del kernel para llamadas al sistema
@@ -36,8 +36,8 @@ _start:
         interrumpir de forma correcta ejecucion evitando
         violacion del segmento core(un segmento del corazon del kernel)
     */
-    movl $1, %eax
-    movl $0, %ebx
+    mov $1, %rax
+    mov $0, %rbx
     int $0x80
 /* Manipulación de datos */
 .data 
